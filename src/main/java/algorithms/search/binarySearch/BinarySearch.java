@@ -5,10 +5,9 @@ import java.util.Arrays;
 public class BinarySearch {
     public static void main(String[] args) {
         final Integer[] integers = {1, -4, 10, 14, 3, 2, -5, 0, -4, 10};
-        final Integer[] sortedIntegers = Arrays.stream(integers).sorted().toArray(Integer[]::new);
-        System.out.println(Arrays.toString(sortedIntegers));
+        Arrays.sort(integers);
 
-        final int position = binarySearch(sortedIntegers, 10);
+        final int position = binarySearch(integers, 10);
         System.out.println(position);
     }
 

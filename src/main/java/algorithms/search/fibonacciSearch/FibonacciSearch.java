@@ -5,8 +5,9 @@ import java.util.Arrays;
 public class FibonacciSearch {
     public static void main(String[] args) {
         final Integer[] integers = {1, -4, 10, 14, 3, 2, -5, 0, -4, 10};
-        final Integer[] sorted = Arrays.stream(integers).sorted().toArray(Integer[]::new);
-        final int position = fibonacciSearch(sorted, 10);
+        Arrays.sort(integers);
+
+        final int position = fibonacciSearch(integers, 10);
         System.out.println(position);
     }
 
